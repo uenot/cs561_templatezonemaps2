@@ -51,7 +51,7 @@ queries by yourself).
 ```
 or 
 ```
-./workload -N 1000000 -P 10000
+./workloadgenerator -N 1000000 -P 10000
 ```
 ## Zone Map Header
 The zonemaps.h header file is a template that defines the basic components of a zone map data structure.
