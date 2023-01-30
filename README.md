@@ -70,7 +70,6 @@ performance. The execution times are to be written either into a log file or dis
 queries, the selectivity of range queries etc. 
 
 Compile all files using the "make" command.
-There are currently 4 test cases pre-configured in main.cpp, as per the assignment request.
 Once the implementation of zone maps is complete, you will be required to fill in the appropriate test
 call in the main.cpp file for the point/range queries. 
 
