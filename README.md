@@ -11,7 +11,7 @@ scratch. You may require additional helper functions to satisfy the requirements
 ## Generating Workloads
 You will be asked to generate workloads of a specific size, and generate specific number of point and
 range queries. An incomplete workload generator is provided as part of the API that performs the
-required functionality (**not that you are required to implement the range query generator for specfic
+required functionality (**note that you are required to implement the range query generator for specific
 selectivity**).  Compile the workload generator using the "make" command, and execute using
 ```c
 ./workloadgenerator --help
