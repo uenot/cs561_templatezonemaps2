@@ -1,12 +1,5 @@
 # CS 561 guide for SCC
 
-The Shared Computing Cluster (SCC) provides a standardized environment for the class project. SCC can be fully accessed and used over the
-web browser and does not require a specific OS on your personal machine neither an SSH client. Using SCC will simplify setting up the
-working environments for the CS660 project.
-
-Below we have a guide to help you get started with SCC.
-**You can read more about the SCC [here](https://www.bu.edu/tech/support/research/system-usage/connect-scc/scc-ondemand/).**
-
 ## Connecting to the SCC
 
 Go to the following link on your web browser: [http://scc-ondemand2.bu.edu/](http://scc-ondemand2.bu.edu/).
@@ -148,13 +141,11 @@ You can also access a terminal from VS Code. To open the terminal, click on the 
 ![](img/scc-vscode-terminal-1.png)
 
 Then, select `New Terminal` option to open the new terminal.
-![](img/scc-vscode-terminal-2.png)
-![](img/scc-vscode-terminal-3.png)
+![](img/scc-open-vscode-terminal.png)
 
 You should see a terminal open up on the bottom pane of your page.
-![](img/scc-vscode-terminal-4.png)
+![](img/scc-vscode-terminal.png)
 
 You can now use your `cmake` and `ctest` commands like in any terminal within VS Code too!
-![](img/scc-vscode-terminal-cmake.png)
 
 **YOU ARE NOW READY TO START HACKING SIMPLEDB ON SCC!**

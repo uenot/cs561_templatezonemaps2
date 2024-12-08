@@ -1,5 +1,14 @@
 # CS 561: Data Systems Architecture - TemplateZonemaps
 
+## Getting started with SCC
+
+The Shared Computing Cluster (SCC) provides a standardized environment for the class project. SCC can be fully accessed and used over the
+web browser and does not require a specific OS on your personal machine neither an SSH client. Using SCC will simplify setting up the
+working environments for the CS561 projects.
+
+We have provided the [SCC guide](SCC.md) to help you get started.
+
+**You can read more about the SCC [here](https://www.bu.edu/tech/support/research/system-usage/connect-scc/scc-ondemand/).**
 
 ## About
 
