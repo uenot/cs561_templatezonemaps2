@@ -2,7 +2,7 @@
 
 ## Getting started with SCC
 
-We suggest that you use [Shared Computing Cluster](https://www.bu.edu/tech/support/research/system-usage/connect-scc/scc-ondemand/) (SCC) for your projects. The SCC provides a standardized environment
+We suggest that you use [Shared Computing Cluster](https://www.bu.edu/tech/support/research/system-usage/connect-scc/scc-ondemand/) (SCC) for your projects. SCC provides a standardized environment
 and can be fully accessed and used over the web browser. SSC does not require a specific OS on
 your personal machine neither an SSH client. Using SCC will simplify setting up the working environments for the CS561 projects.
 
