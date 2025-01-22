@@ -147,5 +147,3 @@ You should see a terminal open up on the bottom pane of your page.
 ![](img/scc-vscode-terminal.png)
 
 You can now use your `cmake` and `ctest` commands like in any terminal within VS Code too!
-
-**YOU ARE NOW READY TO START HACKING SIMPLEDB ON SCC!**
