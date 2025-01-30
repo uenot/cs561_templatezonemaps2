@@ -144,7 +144,16 @@ void generate_point_queries(std::string & output_path, Parameters & params,
 }
 void generate_range_queries(std::string & output_path, Parameters & params,
 		std::vector<int> & input_data) {
-	// Your code starts here ...
+		unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();	
+	std::default_random_engine gen (seed);
+	std::uniform_int_distribution<int>  dist(0, (size_t) (params.UB - (params.s * params.UB)));
+	std::ofstream output_file(output_path);
+	for (size_t i = 0; i < params.P; i++) {
+		int x = dist(gen);
+		int y = x + (params.s * params.UB);
+		output_file << x << std::endl << y << std::endl;
+	}
+	output_file.close();
 }
 
 
