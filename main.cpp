@@ -26,6 +26,32 @@ void loadPointQueries(std::string & input_queries_path, std::vector<int> & queri
   }
   // shuffle indexes
   std::random_shuffle(queries.begin(), queries.end());
+}
+
+struct range_query {
+  int start;
+  int end;
+};
+
+// TODO
+void loadRangeQueries(std::string & input_queries_path, std::vector<range_query> & queries)
+{
+  queries.clear();
+  std::ifstream infile(input_queries_path, ios::in);
+  int tmp;
+  bool isStart = true;
+  range_query rq;
+  while (infile >> tmp) {
+    if (isStart) {
+      rq.start = tmp;
+    } else {
+      rq.end = tmp;
+      queries.push_back(rq);
+    }
+    isStart = !isStart;
+  }
+  // shuffle indexes
+  std::random_shuffle(queries.begin(), queries.end());
 
 }
 
@@ -68,8 +94,23 @@ int main(int argc, char **argv)
   std::cout << "Time taken to perform point queries from zonemap = " << point_query_time*1.0/kRuns << " microseconds" << endl;
     
   //3. ----------------------------- range queries -----------------------------
-  unsigned long long range_query_time = 0;
-  // Your code starts here ...
+  std::vector<range_query> range_queries;
+  loadRangeQueries(kRangeQueriesPath, range_queries); 
+  auto start_rq = std::chrono::high_resolution_clock::now();
+
+  for (size_t r = 0; r < kRuns; r++) {
+    for (range_query rq: range_queries) {
+      // query from zonemaps here
+      zones.query(rq.start, rq.end);
+    }
+
+    std::random_shuffle(range_queries.begin(), range_queries.end());
+  }
+
+  auto stop_rq = std::chrono::high_resolution_clock::now();
+  auto duration_rq = std::chrono::duration_cast<std::chrono::microseconds>(stop_rq - start_rq);
+
+  unsigned long long range_query_time = duration_rq.count();;
 
   std::cout << "Time taken to perform range query from zonemap = " << range_query_time*1.0/kRuns << " microseconds" << endl;
   return 0;
