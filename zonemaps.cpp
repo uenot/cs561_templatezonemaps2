@@ -25,6 +25,10 @@ void zonemap<T>::build() {
                 z.min = x;
             }
             z.size++;
+            i++;
+            if (i >= elements.size()) {
+                break;
+            }
         }
         zones.push_back(z);
         num_zones++;
