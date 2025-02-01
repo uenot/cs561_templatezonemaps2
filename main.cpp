@@ -28,6 +28,7 @@ void loadPointQueries(std::string & input_queries_path, std::vector<int> & queri
   std::random_shuffle(queries.begin(), queries.end());
 }
 
+// just a tuple of ints
 struct range_query {
   int start;
   int end;
@@ -39,7 +40,7 @@ void loadRangeQueries(std::string & input_queries_path, std::vector<range_query>
   queries.clear();
   std::ifstream infile(input_queries_path, ios::in);
   int tmp;
-  bool isStart = true;
+  bool isStart = true;  // whether the current line is the start or end of a range
   range_query rq;
   while (infile >> tmp) {
     if (isStart) {
